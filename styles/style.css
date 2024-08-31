@@ -305,10 +305,17 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   border-radius: 5px;
   padding: 20px 40px;
   background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   font-weight: 400;
   font-size: 20px;
   letter-spacing: -0.03em;
   color: var(--light-color);
+  transition: all .3s ease-out;
+}
+
+.modal__form-btn:hover {
+  color: var(--accent-color);
+  background-color: var(--light-color);
 }
 
 @media (max-width: 991px) {
@@ -1368,6 +1375,17 @@ body:has(.preload) {
   animation-fill-mode: forwards;
 }
 
+/* .preload .sponge::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+} */
+
 @keyframes sponge-move {
   0% {
     top: calc(50% - 46px);
@@ -1442,7 +1460,7 @@ body:has(.preload) {
 
   70% {
     top: calc(50% + 92px);
-    left: calc(50% + 224px);
+    left: calc(50% + 176px);
     transform: rotateZ(0deg);
     width: 80px;
     height: 40px;
@@ -1450,19 +1468,20 @@ body:has(.preload) {
 
   75% {
     top: calc(50% + 92px);
-    left: calc(50% + 224px);
+    left: calc(50% + 176px);
+    width: 80px;
     height: 5px;
-    width: 100px;
     transform: rotateZ(0deg);
   }
 
   80%, 90% {
-    height: 5px;
     width: 512px;
+    height: 5px;
     top: calc(50% + 92px);
     transform: rotateZ(0deg);
     left: calc(50% - 256px);
     opacity: 1;
+    scale: 1;
   }
 
   100% {
@@ -1472,6 +1491,7 @@ body:has(.preload) {
     width: 512px;
     transform: rotateZ(0deg);
     left: calc(50% - 256px);
+    scale: 0;
   }
 }
 
@@ -1536,7 +1556,7 @@ body:has(.preload) {
 .hero__box-text span {
   opacity: 1;
   transition: all .3s;
-  transition-delay: calc(0.02s * var(--i));
+  transition-delay: calc(0.01s * var(--i));
 }
 
 .hero__box-text--hide span {
