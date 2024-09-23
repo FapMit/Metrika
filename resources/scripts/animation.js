@@ -1,6 +1,6 @@
 let preloadNode = document.querySelector(".preload");
 
-let headerNode = document.querySelector(".header");
+let headerAnimNode = document.querySelector(".header");
 
 let navListItemNode = document.querySelectorAll(".nav__list-item");
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     preloadNode.style = "z-index: -1";
   }, 10000);
   setTimeout(() => {
-    headerNode.classList.remove("header--hide");
+    headerAnimNode.classList.remove("header--hide");
     document.body.removeChild(preloadNode);
   }, 10100);
   setTimeout(() => {
