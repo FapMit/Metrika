@@ -27,6 +27,18 @@ html, body {
   margin: 0 auto;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 /* BURGER STYLES */
 
 .burger {
@@ -495,8 +507,14 @@ body:has(.modal-wrapper.modal-wrapper--open) {
 /* HERO */
 
 .hero {
-  padding-top: 50px;
-  margin-bottom: 105px;
+  /* padding-top: 50px; */
+  /* margin-bottom: 105px; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .hero__title {
@@ -530,7 +548,7 @@ body:has(.modal-wrapper.modal-wrapper--open) {
 
 @media (max-width: 991px) {
   .hero {
-    padding-top: 131px;
+    /* padding-top: 131px; */
   }
 
   .hero__title {
@@ -549,7 +567,7 @@ body:has(.modal-wrapper.modal-wrapper--open) {
 
 @media (max-width: 575px) {
   .hero {
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
   }
 
   .hero__title {
@@ -565,6 +583,7 @@ body:has(.modal-wrapper.modal-wrapper--open) {
 
   .hero__box-text {
     font-size: 16px;
+    min-width: 312px;
     max-width: 312px;
     left: 15px;
     bottom: 15px;
@@ -584,6 +603,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   padding: 32px 0;
   line-height: 61px;
   letter-spacing: -0.02em;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .about__link {
@@ -595,6 +617,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   font-size: 20px;
   border-radius: 5px;
   transition: all .3s ease-out;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
 }
 
 .about__link:hover {
@@ -613,7 +638,7 @@ body:has(.modal-wrapper.modal-wrapper--open) {
 
 @media (max-width: 575px) {
   .about {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     margin-bottom: 0;
   }
 
@@ -635,6 +660,8 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   margin-bottom: 150px;
 }
 
+.projects__title {}
+
 .projects__list {
   display: flex;
   flex-direction: column;
@@ -649,6 +676,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   flex-direction: column;
   align-items: start;
   gap: 17px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .projects__item-img {
@@ -686,6 +716,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   padding: 60px 0;
   transition: all .3s ease-out;
   font-size: 30px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .projects__btn:hover {
@@ -754,6 +787,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   width: 49%;
   height: auto;
   position: relative;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .services__item::after {
@@ -791,6 +827,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   padding: 56px 0;
   transition: all .3s ease-out;
   font-size: 30px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .services__btn:hover {
@@ -882,6 +921,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   max-width: calc(50% - 25px);
   display: flex;
   flex-direction: column;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .testimonials__item:last-child {
@@ -967,6 +1009,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   margin-bottom: 100px;
   min-height: 717px;
   position: relative;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .gallery__slider {
@@ -1151,6 +1196,9 @@ body:has(.modal-wrapper.modal-wrapper--open) {
   flex-wrap: wrap;
   gap: 30px;
   padding-top: 38px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .contacts__item {
