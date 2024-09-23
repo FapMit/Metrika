@@ -438,6 +438,21 @@ body:has(.modal-wrapper.modal-wrapper--open) {
 
 /* HEADER */
 
+
+
+.header {
+  position: fixed;
+  background-color: var(--light-color);
+  width: 100%;
+  z-index: 11;
+  transition: all .3s ease-in-out;
+}
+
+.header__scroll {
+  transition: all .3s ease-in-out;
+  box-shadow: 0 5px 100px var(--dark-color);
+}
+
 .header .nav__list {
   flex-wrap: nowrap;
   row-gap: 0;
@@ -479,19 +494,6 @@ body:has(.modal-wrapper.modal-wrapper--open) {
 @media (max-width: 991px) {
   .header__container .nav__list {
     display: none;
-  }
-
-  .header {
-    position: fixed;
-    background-color: var(--light-color);
-    width: 100%;
-    z-index: 11;
-    transition: all .3s ease-in-out;
-  }
-
-  .header__scroll {
-    transition: all .3s ease-in-out;
-    box-shadow: 0 5px 100px var(--dark-color);
   }
 }
 
